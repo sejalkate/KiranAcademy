@@ -1,0 +1,15 @@
+package practical;
+public class SumEven221_551
+{
+	public static void main(String[] args) {
+		int sum=0;
+		for(int i=221;i<=551;i++)
+		{
+			if(i%2==0)
+			{
+				sum=sum+i;
+			}
+		}
+		System.out.println(sum);
+	}
+}
