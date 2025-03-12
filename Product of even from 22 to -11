@@ -1,0 +1,15 @@
+package practical;
+public class ProductEven22_11
+{
+	public static void main(String[] args) {
+		int pro=1;
+		for(int i=22;i>=-11;i--)
+		{
+			if(i%2==0)
+			{
+				pro=pro*i;
+			}
+		}
+		System.out.println(pro);
+	}
+}
