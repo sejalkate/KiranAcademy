@@ -1,0 +1,13 @@
+package practical;
+public class ProductFor11_33
+{
+	public static void main(String[] args) 
+	{
+		int product=1;
+		for(int i=11;i<=33;i++)
+		{
+			product=product*i;
+		}
+		System.out.println(product);
+	}
+}
