@@ -1,0 +1,16 @@
+package practical;
+public class ProductOdd11_33
+{
+	public static void main(String[] args)
+	{
+		int pro=1;
+		for(int i=11;i>=-33;i--)
+		{
+			if(i%2!=0)
+			{
+				pro=pro*i;
+			}
+		}
+		System.out.println(pro);
+	}
+}
