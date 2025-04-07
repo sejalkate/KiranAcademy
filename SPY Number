@@ -1,0 +1,48 @@
+package com.polymorphism;
+
+import java.util.Scanner;
+
+public class SPY_Number 
+{
+	public int sum(int num)
+	{
+		int sum=0;
+		while(num>0)
+		{
+			int digit=num%10;
+			sum=sum+digit;
+			num=num/10;
+		}
+		return sum;
+	}
+	public int product(int num)
+	{
+		int product=1;
+		while(num>0)
+		{
+			int digit=num%10;
+			product=product*digit;
+			num=num/10;
+		}
+		return product;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int num=sc.nextInt();
+		SPY_Number s1=new SPY_Number();
+		int sumRes=s1.sum(num);
+		System.out.println("Sum of digits: "+sumRes);
+		int proRes=s1.product(num);
+		System.out.println("Product of digits: "+proRes);
+		if(sumRes==proRes)
+		{
+			System.out.println("SPY number");
+		}
+		else
+		{
+			System.out.println("Not a SPY number");
+		}
+	}
+}
