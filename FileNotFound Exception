@@ -1,0 +1,10 @@
+package com.Exception20;
+import java.io.*;
+public class FileNotFound 
+{
+	//java.io.FileNotFoundException
+	public static void main(String []args) throws FileNotFoundException
+	{
+		FileReader fr=new FileReader("Sejal-file.txt");
+	}
+}
