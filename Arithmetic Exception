@@ -1,0 +1,9 @@
+package com.Exception20;
+public class Arithmetic 
+{
+	// java.lang.ArithmeticException: / by zero
+	public static void main(String []args)
+	{
+		int res=10/0;
+	}
+}
