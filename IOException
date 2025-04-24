@@ -1,0 +1,10 @@
+package com.Exception20;
+import java.io.*;
+public class IOException
+{
+    public static void main(String[] args) throws IOException 
+    {
+        FileReader fr = new FileReader("no-file.txt");
+        fr.read();
+    }
+}
