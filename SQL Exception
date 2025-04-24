@@ -1,0 +1,9 @@
+package com.Exception20;
+import java.sql.*;
+public class SQL 
+{
+	//SQLException
+	public static void main(String[] args) throws SQLException {
+        throw new SQLException("Database error");
+    }
+}
