@@ -1,0 +1,10 @@
+package com.Exception20;
+public class IndexOutOfBound 
+{
+	//java.lang.ArrayIndexOutOfBoundsException
+	public static void main(String []args)
+	{
+		int arr[]=new int[3];
+		System.out.println(arr[5]);
+	}
+}
