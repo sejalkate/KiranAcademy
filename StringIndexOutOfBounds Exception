@@ -1,0 +1,10 @@
+package com.Exception20;
+public class StringIndexOutOfBounds 
+{
+	//java.lang.StringIndexOutOfBoundsException
+	public static void main(String []args)
+	{
+		String name="Sejal";
+		System.out.println(name.charAt(6));
+	}
+}
