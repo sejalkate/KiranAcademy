@@ -1,0 +1,9 @@
+package com.Exception20;
+public class ClassNotFound 
+{
+	//java.lang.ClassNotFoundException
+	public static void main(String []args) throws ClassNotFoundException
+	{
+		Class.forName("com.fake.ClassName");
+	}
+}
