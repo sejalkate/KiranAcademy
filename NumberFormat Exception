@@ -1,0 +1,9 @@
+package com.Exception20;
+public class NumberFormat 
+{
+	//java.lang.NumberFormatException
+	public static void main(String []args)
+	{
+		int num=Integer.parseInt("abc");
+	}
+}
