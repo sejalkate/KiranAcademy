@@ -1,0 +1,9 @@
+package com.Exception20;
+public class Runtime 
+{
+	//java.lang.RuntimeException
+	public static void main(String []args)
+	{
+		throw new RuntimeException("Custom Runtime Exception...!");
+	}
+}
