@@ -1,0 +1,12 @@
+package com.Exception20;
+import java.util.Scanner;
+public class InputMismatch
+{
+	//java.util.InputMismatchException
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int num=sc.nextInt(); //Enter the string to create an exception
+	}
+}
