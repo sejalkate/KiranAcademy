@@ -1,0 +1,42 @@
+package com.exception;
+public class UserAlreadyExistsException extends Exception
+{
+	public UserAlreadyExistsException(String msg)
+	{
+		super(msg);
+	}
+}
+-------------------------------------------------------------------------------------------
+
+public class Registration
+{
+	String username[]= {"Sejal","Radha","Rukmini","Krutika"};
+	public  void register(String name) throws UserAlreadyExistsException
+	{
+		for(String user: this.username)
+		{
+			if (user.equals(name)) 
+			{
+				throw new UserAlreadyExistsException("User is already exists..!");
+			}
+			else
+			{
+				System.out.println(user);
+			}
+		}
+	}
+	public static void main(String[] args)
+	{
+		Registration r=new Registration();
+		for(int i=0;i<r.username.length;i++)
+		{
+			try {
+				r.register(r.username[i]);
+			} catch (UserAlreadyExistsException e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
