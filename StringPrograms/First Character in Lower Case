@@ -1,0 +1,24 @@
+package StringPrograms;
+public class FirstCharacterLowerCase
+{
+	public static void main(String []args)
+	{
+		String s1="jaVa iS a PrograMming lAnGuage";
+		System.out.println("Original String: "+s1);
+		String result=capitalizeFirst(s1);
+		System.out.println("Modified String: "+result);
+	}
+	public static String capitalizeFirst(String s)
+	{
+		String words[]=s.trim().split("\\s+");//Splits by one or more whitespace characters.
+		StringBuilder newString=new StringBuilder();
+		for(String word:words)
+		{
+			if(word.length()>0)
+			{
+				newString.append(Character.toLowerCase(word.charAt(0))).append(word.substring(1).toUpperCase()).append(" ");
+			}
+		}
+		return newString.toString().trim();
+	}
+}
