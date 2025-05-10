@@ -1,0 +1,36 @@
+package StringPrograms;
+public class PalindromeWordsInString 
+{
+	public static void main(String[] args)
+	{
+        String input="madam level test noon radar world civic wow";
+        System.out.println("Original String: " + input);
+        System.out.println("Palindromic Words:");
+        printPalindromicWords(input);
+    }
+    public static void printPalindromicWords(String str)
+    {
+        String words[]=str.trim().split("\\s+"); // Split by spaces
+        for(String word:words) 
+        {
+            if(isPalindrome(word)) 
+            {
+                System.out.println(word);
+            }
+        }
+    }
+    public static boolean isPalindrome(String word) 
+    {
+        int left=0,right=word.length()-1;
+        while(left<right)
+        {
+            if(word.charAt(left)!= word.charAt(right))
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
