@@ -1,0 +1,39 @@
+package StringPrograms;
+public class PalindromeSubstring 
+{
+	public static void main(String[] args) 
+	{
+        String s="abcbadzyyz";
+        System.out.println("Original String: " + s);
+        System.out.println("Palindromic Substrings:");
+        printPalindromeSubstrings(s);
+    }
+    public static void printPalindromeSubstrings(String s) 
+    {
+        for(int i=0;i<s.length();i++)
+        {
+            for(int j=i+1;j<=s.length();j++) 
+            {
+                String sub=s.substring(i,j);
+                if(isPalindrome(sub)) 
+                {
+                    System.out.println(sub);
+                }
+            }
+        }
+    }
+    public static boolean isPalindrome(String str)
+    {
+        int left=0,right=str.length()-1;
+        while(left<right) 
+        {
+            if(str.charAt(left)!=str.charAt(right))
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
