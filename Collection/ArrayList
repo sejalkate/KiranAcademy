@@ -1,0 +1,60 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+public class ArrayListMethods 
+{
+	public static void main(String[] args)
+	{
+		ArrayList list1=new ArrayList();
+		
+		//add()
+		list1.add("Rose");
+		list1.add("Mogra");
+		list1.add("100");
+		list1.add("Lily");
+		list1.add("true");
+		System.out.println(list1);
+		
+		//size()
+		System.out.println("Size: "+ list1.size());
+		
+		//isEmpty()
+		System.out.println("Is it empty: "+list1.isEmpty());
+		
+		ArrayList list2=new ArrayList();
+		
+		//add()
+		list2.add("Car");
+		list2.add("Bike");
+		list2.add("true");
+		
+		//addAll()
+		list1.addAll(list2);
+		System.out.println(list1);
+		
+		//remove()
+		//list1.remove(3);
+		//System.out.println(list1);
+		
+		//removeAll()
+		//list2.removeAll(list2);
+		//System.out.println(list2);
+		
+		//retainAll()
+		list2.retainAll(list2);
+		System.out.println(list2);
+		
+		//indexOf()
+		int index=list1.indexOf("Mogra");
+		System.out.println(index);
+		
+		//clear()
+		list2.clear();
+		System.out.println(list2);
+		
+		//contain
+		System.out.println(list1.contains("Rose"));
+		
+		//sublist()
+		System.out.println(list1.subList(1,3));
+	}
+}
