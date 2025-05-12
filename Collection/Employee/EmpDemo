@@ -1,0 +1,23 @@
+package com.collection_ArrayList;
+public class EmployeeDemo 
+{
+	public static void main(String []args)
+	{
+		Employee emp1=new Employee("Alice",30,101);
+		Employee emp2=new Employee("Bob",25,102);
+		Employee emp3=new Employee("ABC",10,103);
+		Employee emp4=new Employee("DEF",43,104);
+		Employee emp5=new Employee("GHI",22,105);
+		Employee emp6=new Employee("JKL",23,106);
+		Employee emp7=new Employee("MON",22,107);
+		Employee emp8=new Employee("TUE",25,108);
+		Employee emp9=new Employee("THU",24,109);
+		Employee emp10=new Employee("FRI",25,110);
+		for(Employee emp:Employee.getEmpList())
+		{
+			emp.showData();
+			System.out.println(emp);
+			System.out.println();
+		}
+	}
+}
