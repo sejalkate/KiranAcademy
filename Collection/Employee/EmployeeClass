@@ -1,0 +1,38 @@
+package com.collection_ArrayList;
+//12 May 2025
+import java.util.ArrayList;
+public class Employee extends Person
+{
+	private int empId;
+	private static ArrayList<Employee> emp_list=new ArrayList<>();
+	public Employee()
+	{
+		emp_list.add(this);
+	}
+	public Employee(String name,int age,int empId)
+	{
+		super(name,age);
+		this.empId=empId;
+		emp_list.add(this);
+	}
+	public void acceptData(String name,int age,int empId)
+	{
+		super.acceptData(name, age);
+		this.empId=empId;
+	}
+	public void showData()
+	{
+		super.showData();
+		System.out.println("Employee Id: "+empId);
+		
+	}
+	@Override
+	public String toString()
+	{
+		return super.toString()+" , EmpId= "+empId;
+	}
+	public static ArrayList<Employee>getEmpList()
+	{
+		return emp_list;
+	}
+}
