@@ -1,0 +1,23 @@
+package com.collection_ArrayList;
+import java.util.TreeMap;
+//12 May 2025
+public class TreeMapProgram 
+{
+	public static void main(String[] args) 
+	{
+		TreeMap map=new TreeMap();
+		map.put(100, "Mango");
+		map.put(200, "Banana");
+		map.put(300,"Guava");
+		map.put(400, 'S');
+		map.put(500,33.11);
+		map.put(-600,"123");
+		map.put(700, null);
+		//map.put(null, "Mango"); --->NullPointerException
+		//map.put("Sejal",25); --->ClassCastException
+		System.out.println(map);
+		System.out.println(map.firstEntry());
+		System.out.println(map.firstKey());
+		System.out.println(map.size());	
+	}
+}
