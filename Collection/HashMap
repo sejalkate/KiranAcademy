@@ -1,0 +1,60 @@
+package com.collection_ArrayList;
+//12 May 2025
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapProgram
+{
+	public static void main(String []args)
+	{
+		HashMap map=new HashMap();
+		map.put(100,"Sejal");
+		map.put(200, "Radha");
+		map.put("Apple", 300);
+		map.put('7', null);
+		map.put(null, "Mango");
+		System.out.println(map);
+		Set set_entry=map.entrySet();
+		Iterator entry_itr=set_entry.iterator();
+		//Printing the keys
+		while(entry_itr.hasNext())
+		{
+			Object o=entry_itr.next();
+			Map.Entry entry=(Map.Entry)(o);
+			System.out.println("Key--->"+entry.getKey());
+		}
+	}
+}
+
+
+
+package com.collection_ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+
+//12 May 2025
+public class HashMapProgram2
+{
+	public static void main(String[] args)
+	{
+		HashMap map=new HashMap();
+		map.put(100, "Mango");
+		map.put("Apple",33.11);
+		map.put(false,1000);
+		map.put('T', null);
+		map.put(null, "Mango");
+		map.put(30.0, 'G');
+		System.out.println(map);
+		Collection collect_value=map.values();
+		Iterator itr=collect_value.iterator();
+		//Printing the values
+		while(itr.hasNext())
+		{
+			Object o=itr.next();
+			System.out.println("Value--->"+o);
+		}
+	}
+}
