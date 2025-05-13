@@ -1,0 +1,45 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+import java.util.Collections;
+public class EmployeeDemo
+{
+    public static void main(String[] args) 
+    {
+        ArrayList<Employee> empList = new ArrayList<>();
+        // Creating and adding employees (they will be added immediately)
+        Employee e1 = new Employee("ABC", 28, 101, 55000);
+        empList.add(e1);
+        Employee e2 = new Employee("DEF", 35, 102, 62000);
+        empList.add(e2);
+        Employee e3 = new Employee("GHI", 25, 103, 50000);
+        empList.add(e3);
+        Employee e4 = new Employee("JKL", 27, 104, 40000);
+        empList.add(e4);
+        Employee e5 = new Employee("MNO", 22, 105, 55000);
+        empList.add(e5);
+        Employee e6 = new Employee("PQR", 20, 106, 30000);
+        empList.add(e6);
+        Employee e7 = new Employee("STU", 37, 107, 45000);
+        empList.add(e7);
+        Employee e8 = new Employee("VWX", 25, 108, 50000);
+        empList.add(e8);
+        Employee e9 = new Employee("YZW", 24, 109, 60000);
+        empList.add(e9);
+        Employee e10 = new Employee("ZAB", 27, 110, 50000);
+        empList.add(e10);
+        System.out.println("Before Sorting:");
+        for (Employee e : empList) 
+        {
+            e.showDetails();
+        }
+        // Sorting the employee list by age using compareTo()
+        Collections.sort(empList);
+        System.out.println("\nAfter Sorting by Age:");
+        for (Employee e : empList) 
+        {
+            e.showDetails();
+        }
+    }
+}
+
+
