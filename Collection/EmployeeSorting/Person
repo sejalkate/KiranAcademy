@@ -1,0 +1,53 @@
+package com.collection_ArrayList;
+import java.util.*;
+//13 May 2025
+// Base class Person
+class Person 
+{
+    private String name;
+    private int age;
+    public Person() 
+    {
+        // Default constructor
+    }
+    public Person(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    // Getter and Setter
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    public int getAge() 
+    {
+        return age;
+    }
+    public void setAge(int age) 
+    {
+        this.age = age;
+    }
+    // Method to accept properties
+    public void acceptDetails(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    // Method to show properties
+    public void showDetails() 
+    {
+        System.out.println(toString());
+    }
+    // Override toString
+    @Override
+    public String toString()
+    {
+        return "Name: " + name + "   |  Age: " + age;
+    }
+}
+
