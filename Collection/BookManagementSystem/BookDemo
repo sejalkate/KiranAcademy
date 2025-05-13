@@ -1,0 +1,107 @@
+package com.collection_ArrayList;
+import java.util.*;
+import java.lang.*;
+public class BookDemo
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        do 
+        {
+        	System.out.println();
+            System.out.println("*****-----Menu-----*****");
+            System.out.println("1. Add book");
+            System.out.println("2. Update book");
+            System.out.println("3. Delete book");
+            System.out.println("4. Show book");
+            System.out.println("5. Show all books");
+            System.out.println("6. Sort book information according to total");
+            System.out.println("7. Exit");
+            System.out.println();
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            switch (choice)
+            {
+                case 1:
+                    System.out.print("Enter name: ");
+                    String name = sc.next();
+                    System.out.print("Enter price: ");
+                    double price = sc.nextDouble();
+                    System.out.print("Enter quantity: ");
+                    int quantity = sc.nextInt();
+                    new Book(name, price, quantity);
+                    System.out.println("Book added.");
+                    System.out.println();
+                    break;
+                case 2:
+                    System.out.print("Enter Book ID to update: ");
+                    int uid = sc.nextInt();
+                    boolean found = false;
+                    for (Book b : Book.bookList)
+                    {
+                        if (b.getId() == uid)
+                        {
+                            System.out.print("Enter new name: ");
+                            name = sc.next();
+                            System.out.print("Enter new price: ");
+                            price = sc.nextDouble();
+                            System.out.print("Enter new quantity: ");
+                            quantity = sc.nextInt();
+                            b.update(name, price, quantity);
+                            found = true;
+                            System.out.println("Book updated.");
+                            break;
+                        }
+                    }
+                    if (!found) System.out.println("Book not found.");
+                    break;
+                case 3:
+                    System.out.print("Enter Book ID to delete: ");
+                    int did = sc.nextInt();
+                    Iterator<Book> iterator = Book.bookList.iterator();
+                    found = false;
+                    while (iterator.hasNext()) 
+                    {
+                        Book b = iterator.next();
+                        if (b.getId() == did) {
+                            iterator.remove();
+                            found = true;
+                            System.out.println("Book deleted.");
+                            break;
+                        }
+                    }
+                    if (!found) System.out.println("Book not found.");
+                    break;
+                case 4:
+                    System.out.print("Enter Book ID to show: ");
+                    int sid = sc.nextInt();
+                    found = false;
+                    for (Book b : Book.bookList)
+                    {
+                        if (b.getId() == sid) {
+                            b.show();
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) System.out.println("Book not found.");
+                    break;
+                case 5:
+                    Book.showAllBooks();
+                    break;
+                case 6:
+                    Book.bookList.sort((b1, b2) -> Double.compare(b2.getTotal(), b1.getTotal()));
+                    Book.showAllBooks();
+                    break;
+                case 7:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+            }
+
+        } while (choice != 7);
+        sc.close();
+    }
+}
