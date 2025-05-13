@@ -1,0 +1,49 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+class Student
+{
+    private String name;
+    private int age;
+    static ArrayList<Student> studentList = new ArrayList<>();
+    public Student() 
+    {
+        studentList.add(this); 
+    }
+    public Student(String name, int age) 
+    {
+        this.name = name;
+        this.age = age;
+        studentList.add(this); 
+    }
+    public void acceptData() 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        this.name = sc.nextLine();
+        System.out.print("Enter Age: ");
+        this.age = sc.nextInt();
+    }
+    public void displayData() 
+    {
+        System.out.println("Name: " + name + "| Age: " + age);
+    }
+}
+
+
+package com.collection_ArrayList;
+public class DemoStudent
+{
+	public static void main(String[] args)
+	{
+        Student s1 = new Student("Amit", 20);
+        Student s2 = new Student();
+        s2.acceptData();
+        System.out.println("\n--- Student List ---");
+        for (Student s : Student.studentList) 
+        {
+            s.displayData();
+        }
+    }
+}
