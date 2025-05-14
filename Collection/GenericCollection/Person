@@ -1,0 +1,42 @@
+package com.collection_ArrayList;
+import java.util.Scanner;
+public class PersonGeneric
+{
+    private String name;
+    private int age;
+    public PersonGeneric() 
+    {
+    	
+    }
+    public String getName() 
+    {
+        return name;
+    }
+    public int getAge() 
+    {
+        return age;
+    }
+	public PersonGeneric(String name, int age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+    public void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter name: ");
+        name=sc.nextLine();
+        System.out.print("Enter age: ");
+        age=sc.nextInt();
+        sc.nextLine(); 
+    }
+    public void show()
+    {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+    @Override
+    public String toString() 
+    {
+        return "Person: Name= "+name+"  |  Age= " +age+"  |  ";
+    }
+}
