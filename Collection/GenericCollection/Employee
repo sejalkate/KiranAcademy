@@ -1,0 +1,40 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class EmployeeGeneric extends PersonGeneric
+{
+    private String employeeId;
+    private String department;
+    public EmployeeGeneric() 
+    {
+    	
+    }
+    public EmployeeGeneric(String name, int age, String employeeId, String department) 
+    {
+        super(name, age);
+        this.employeeId=employeeId;
+        this.department=department;
+    }
+    @Override
+    public void accept()
+    {
+        super.accept();
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Employee ID: ");
+        employeeId=sc.nextLine();
+        System.out.print("Enter Department: ");
+        department=sc.nextLine();
+        System.out.println();
+    }
+    @Override
+    public void show() 
+    {
+    	System.out.println("Person :  Name=" + getName() + "  |  Age=" + getAge());
+        System.out.println("Employee :  Employee ID=" + employeeId + "  |  Department=" + department);
+    }
+	@Override
+    public String toString() {
+        return super.toString() + "Employee: Employee ID= "+employeeId+"  |  Department= "+department;
+    }
+}
+
