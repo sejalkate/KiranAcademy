@@ -1,0 +1,47 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+import java.util.ListIterator;
+public class ListIterator1
+{
+	public static void main(String []args)
+	{
+		ArrayList l=new ArrayList();
+		l.add("Lion");
+		l.add("Tiger");
+		l.add("Bear");
+		l.add("Monkey");
+		l.add("Elephant");
+		System.out.println(l);
+		System.out.println();
+		ListIterator litr=l.listIterator();
+		System.out.println("Printing using hasNext() and next()");
+		while(litr.hasNext()) 
+		{
+			System.out.print(litr.next()+"  ");
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println("Printing using hasPrevious() and previous()");
+		while(litr.hasPrevious())
+		{
+			System.out.print(litr.previous()+"  ");
+		}
+		System.out.println();
+		System.out.println();
+		while(litr.hasNext()) 
+		{
+			String an=(String) litr.next();
+			if(an.equals("Bear"))
+			{
+				litr.remove();
+			}
+			if(an.equals("Elephant"))
+			{
+				litr.set("Ant");
+			}
+		}
+		System.out.println("Removing Bear and updating Elephant as Ant:"+l);
+		System.out.println(litr.previousIndex());//gives previous index
+		System.out.println(litr.nextIndex());//gives next index
+	}
+}
