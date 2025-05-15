@@ -1,0 +1,24 @@
+package com.collection_ArrayList;
+import java.util.*;
+public class Iterator1 
+{
+	public static void main(String []args)
+	{
+		ArrayList al=new ArrayList();
+		for(int i=1;i<=10;i++)
+		{
+			al.add(i);
+		}
+		System.out.println(al);
+		Iterator i=al.iterator();
+		while(i.hasNext())
+		{
+			Integer n=(Integer) i.next();
+			if(n%2==0)
+			{
+				i.remove();
+			}
+		}
+		System.out.println(al);
+	}
+}
