@@ -1,0 +1,14 @@
+package com.collection_ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+public class LinkedHashMap1 
+{
+	public static void main(String []args)
+	{
+		Map m=new LinkedHashMap();
+		m.put(45,"Hello");
+		m.put(55,"Hi");
+		m.put(27,"Vanakkam");
+		System.out.println(m);//Maintains insertion order
+	}
+}
