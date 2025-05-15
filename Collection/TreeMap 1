@@ -1,0 +1,21 @@
+package com.collection_ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
+public class TreeMap1
+{
+	public static void main(String []args)
+	{
+		Map m=new TreeMap();
+		m.put(1,"Shakti");
+		m.put(2,"Sravanth");
+		m.put(3,"Java");
+		m.put(4,"Python");
+		m.put(5,"C++");
+		//m.put("Three","Dinga");ClassCastException --->Can't pass heterogeneous values
+		//m.put(null,"Sundra");NullPointerException --->Can't insert null values
+		System.out.println(m);
+		m.put(6,null);//null values can be possible
+		m.put(7,null);//can able to store multiple null as values
+		System.out.println(m);
+	}
+}
