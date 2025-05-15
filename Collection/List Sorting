@@ -1,0 +1,28 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+public class StudentDemoP 
+{
+	public static void main(String []args)
+	{
+		List<StudentP> student=new ArrayList<StudentP>();
+		student.add(new StudentP(1001,"Dinga"));
+		student.add(new StudentP(1008,"Dingi"));
+		student.add(new StudentP(1003,"Sundra"));
+		student.add(new StudentP(1025,"Sundri"));
+		student.add(new StudentP(1010,"Gunda"));
+		System.out.println("Before sorting: ");
+		for(StudentP s:student)
+		{
+			System.out.println(s);
+		}
+		Collections.sort(student);
+		System.out.println();
+		System.out.println("After sorting: ");
+		for(StudentP s:student)
+		{
+			System.out.println(s);
+		}
+	}
+}
