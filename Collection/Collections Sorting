@@ -1,0 +1,24 @@
+package com.collection_ArrayList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+public class Sorting 
+{
+	public static void main(String []args)
+	{
+		List l=new ArrayList();
+		l.add(17);
+		l.add(71);
+		l.add(54);
+		l.add(98);
+		l.add(45);
+		l.add(17);
+		l.add(12);
+		l.add(34);
+		System.out.println(l);
+		Collections.sort(l);
+		System.out.println("Ascending order: "+l);
+		Collections.sort(l,Collections.reverseOrder());
+		System.out.println("Descending order: "+l);	
+	}
+}
