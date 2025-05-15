@@ -1,0 +1,26 @@
+package com.collection_ArrayList;
+import java.util.TreeSet;
+public class TreeSet1 
+{
+	public static void main(String []args)
+	{
+		TreeSet h=new TreeSet();
+		h.add(65);
+		h.add(10);
+		h.add(50);
+		h.add(30);
+		h.add(65);//Only one value for Duplicate elements 
+		h.add(100);
+		h.add(12);
+		h.add(12);
+		//h.add(null);NullPointerException
+		//h.add("Sejal");ClassCastException
+		System.out.println(h);//Sorted Order
+		System.out.println(h.first());//Gives first element
+		System.out.println(h.last());//Gives last element
+		System.out.println(h.pollFirst());//Removes first element
+		System.out.println(h.pollLast());//Removes last element
+		System.out.println(h);
+		System.out.println(h.subSet(12,65));//Gives the subset
+	}
+}
