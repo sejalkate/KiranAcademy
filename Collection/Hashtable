@@ -1,0 +1,14 @@
+package com.collection_ArrayList;
+import java.util.Hashtable;
+import java.util.Map;
+public class HashTable1 
+{
+	public static void main(String []args)
+	{
+		Map m=new Hashtable();
+		m.put(1, "Rose");
+		m.put(2, "Mogra");
+		m.put(3, "Lily");
+		System.out.println(m);
+	}
+}
