@@ -1,0 +1,33 @@
+package com.collection_ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+public class OccuranceOfWords 
+{
+	public static void main(String[] args) 
+	{
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String s=sc.nextLine();
+        Map m=new HashMap();
+        String[] words=s.split(" ");
+        for(String word:words) 
+        {
+            word=word.toLowerCase(); 
+            if(m.containsKey(word))
+            {
+            	int count=(int) m.get(word);
+                m.put(word,count+1);
+            } else 
+            {
+                m.put(word,1);
+            }
+        }
+        System.out.println("Word occurrences: ");
+        for(Object key:m.keySet())
+        {
+            System.out.println(key+": "+ m.get(key));
+        }
+        sc.close();
+    }
+}
