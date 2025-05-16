@@ -1,0 +1,34 @@
+package com.collection_ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+public class OccuranceOfCharacter 
+{
+	public static void main(String[] args)
+	{
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+        Map m = new HashMap();
+        for(char c:s.toCharArray())
+        {
+            if(c!=' ') 
+            {
+                if(m.containsKey(c))
+                {
+                    int count=(int) m.get(c); 
+                    m.put(c, count + 1);
+                } 
+                else 
+                {
+                    m.put(c, 1);
+                }
+            }
+        }
+        System.out.println("Character occurrences: ");
+        for(Object key:m.keySet()) 
+        {
+            System.out.println(key+"-->"+m.get(key));
+        }
+    }
+}
